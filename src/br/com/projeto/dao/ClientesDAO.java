@@ -7,6 +7,7 @@ import br.com.projeto.jdbc.ConnectionFactory;
 import br.com.projeto.model.Clientes;
 import java.sql.PreparedStatement;
 import java.sql.Connection;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 
@@ -46,7 +47,7 @@ public class ClientesDAO {
             
             JOptionPane.showMessageDialog(null, "Cadastrado com sucesso!");
             
-        } catch (Exception erro) {
+        } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null, "Erro: "+erro);
         }
         
